@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>SoundBoard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="btn" class="btn btn-1"></div>
+      <div id="btn" class="btn btn-2"></div>
+      <div id="btn" class="btn btn-3"></div>
+      <div id="btn" class="btn btn-4"></div>
+      <div id="btn" class="btn btn-5"></div>
+      <div id="btn" class="btn btn-6"></div>
+      <div id="btn" class="btn btn-7"></div>
+      <div id="btn" class="btn btn-8"></div>
+      <div id="btn" class="btn btn-9"></div>
+    </div>
+
+    <script>
+      const btn1 = document.querySelector("div.btn-1");
+      const btn2 = document.querySelector("div.btn-2");
+      const btn3 = document.querySelector("div.btn-3");
+      const btn4 = document.querySelector("div.btn-4");
+      const btn5 = document.querySelector("div.btn-5");
+      const btn6 = document.querySelector("div.btn-6");
+      const btn7 = document.querySelector("div.btn-7");
+      const btn8 = document.querySelector("div.btn-8");
+      const btn9 = document.querySelector("div.btn-9");
+
+     // const scream = new Audio('/scream.mp3');
+
+
+
+      let r = getRandomInt(0, 256);
+      let g = getRandomInt(0, 256);
+      let b = getRandomInt(0, 256);
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+      }
+
+      function getRandomColor() {
+        r = getRandomInt(0, 256);
+        g = getRandomInt(0, 256);
+        b = getRandomInt(0, 256);
+      }
+
+      async function playSound(audio) {
+        await audio.play();
+      }
+
+      btn1.addEventListener("click", (e) => {
+        playSound(new Audio('/scream.mp3'));
+
+        btn1.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn2.addEventListener("click", (e) => {
+        playSound(new Audio('/ewww.mp3'));
+        btn2.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn3.addEventListener("click", (e) => {
+        playSound(new Audio('/chomp.mp3'));
+        btn3.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn4.addEventListener("click", (e) => {
+        playSound(new Audio('/stinks.mp3'));
+        btn4.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn5.addEventListener("click", (e) => {
+        playSound(new Audio('/boom.mp3'));
+        btn5.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn6.addEventListener("click", (e) => {
+        playSound(new Audio('/tablecrash.mp3'));
+        btn6.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn7.addEventListener("click", (e) => {
+        playSound(new Audio('/bonk.mp3'));
+        btn7.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn8.addEventListener("click", (e) => {
+        playSound(new Audio('/what.mp3'));
+        btn8.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+      btn9.addEventListener("click", (e) => {
+        playSound(new Audio('/pipe.mp3'));
+        btn9.style.backgroundColor =
+          "rgba(" + r + "," + g + "," + b + "," + " 1)";
+        getRandomColor();
+      });
+    </script>
+  </body>
+</html>
